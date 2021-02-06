@@ -1,0 +1,1 @@
+﻿javascript:function%20setMS(){var%20element=document.getElementById("serverTime");var%20time=element.innerHTML.match(/^\d+\:\d+\:\d+/);var%20date=new%20Date();var%20ms=(date.getMilliseconds()).toString();while(ms.length<3){ms="0"+ms;};element.innerHTML=time+":"+ms;}(function%20main(){window.setInterval(setMS,1);})();
