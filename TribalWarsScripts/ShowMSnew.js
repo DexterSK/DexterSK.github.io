@@ -6,6 +6,8 @@
 	
 	if( relative_time.length > 0 ) // elements with class "relative_time" exist
 		var time1 = relative_time.innerHTML.match(/^\d+\:\d+\:\d+/);
+	else
+		alert("Class relative_time not found.");
 	
 	var date = new Date();
 	var ms = ( date.getMilliseconds() ).toString();
@@ -19,6 +21,8 @@
 	
 	if( relative_time.length > 0 ) // elements with class "relative_time" exist
 		relative_time.innerHTML=time+":"+ms;
+	else
+		alert("Class relative_time not found.");
 
 }(function main()
 {
