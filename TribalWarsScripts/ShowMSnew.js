@@ -3,7 +3,7 @@
 	// Príchod:	27.02. o 04:12:00
 	// Príchod:	zajtra 01:59:55
 	// Príchod:	dnes 13:52:03
-	var found = false; 
+	var found = true; 
 	var serverTime = document.getElementById("serverTime");
 	var relative_time = document.getElementsByClassName("relative_time");
 	var time = serverTime.innerHTML.match(/^\d+\:\d+\:\d+/);
@@ -14,7 +14,7 @@
 	{
 		//alert("Class relative_time not found.");
 		//return;
-		found = true;
+		found = false;
 	}
 	
 	var date = new Date();
