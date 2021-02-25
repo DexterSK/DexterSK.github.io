@@ -1,8 +1,8 @@
 ﻿function setMS(){
 	var element=document.getElementById("serverTime");
-	var dextersk=document.getElementsByClassName("relative_time");
+	//var dextersk=document.getElementsByClassName("relative_time");
 	var time=element.innerHTML.match(/^\d+\:\d+\:\d+/);
-	var time1=dextersk.innerHTML.match(/^\d+\:\d+\:\d+/);
+	//var time1=dextersk.innerHTML.match(/^\d+\:\d+\:\d+/);
 	var date=new Date();
 	var ms=(date.getMilliseconds()).toString();
 	
@@ -12,7 +12,7 @@
 	};
 	
 	element.innerHTML=time+":"+ms;
-	dextersk.innerHTML=time1+":"+ms;
+	//dextersk.innerHTML=time1+":"+ms;
 }(function main(){
 	window.setInterval(setMS,1);
 })();
