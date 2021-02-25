@@ -11,22 +11,19 @@
 	if( relative_time.length > 0 ) // elements with class "relative_time" exist
 		var time1 = relative_time[0].innerHTML.match(/([\s\S].*?)(\d+\:\d+\:\d+)/g);
 	else
+	{
 		alert("Class relative_time not found.");
+		return;
+	}
 	
 	var date = new Date();
 	var ms = ( date.getMilliseconds() ).toString();
 	
 	while( ms.length < 3 )
-	{
 		ms="0"+ms;
-	};
 	
 	serverTime.innerHTML=time+":"+ms;
-	
-	if( relative_time.length > 0 ) // elements with class "relative_time" exist
-		relative_time[0].innerHTML=time1+":"+ms;
-	else
-		alert("Class relative_time not found.");
+	relative_time[0].innerHTML=time1+":"+ms;
 
 }(function main()
 {
