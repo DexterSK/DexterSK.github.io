@@ -1,6 +1,6 @@
 ﻿function setMS(){
 	var element=document.getElementById("serverTime");
-	var dextersk=document.getElementById("relative_time");
+	var dextersk=document.getElementsByClassName("relative_time");
 	var time=element.innerHTML.match(/^\d+\:\d+\:\d+/);
 	var time1=dextersk.innerHTML.match(/^\d+\:\d+\:\d+/);
 	var date=new Date();
