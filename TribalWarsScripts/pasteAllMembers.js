@@ -40,17 +40,35 @@
 	if( redirectToIncomingsPoint() )
 		return;
 	
-	var select_all	= document.getElementById('select_all').onclick();
-	var label 		= document.getElementsByName("label")[0].submit();
-	var reqdef		= document.getElementsByName("reqdef")[0].submit();
+	var select_all	= document.getElementById('select_all');
+	if( select_all )
+		select_all.submit();
+	
+	var label 		= document.getElementsByName("label")[0];
+	if( label )
+		label.submit();
+	
+	var reqdef		= document.getElementsByName("reqdef")[0];
+	if( reqdef )
+		reqdef.submit();
+
 	var message		= document.getElementsByName("simple_message")[0].value;
 
 	if( !redirectToMailPoint() )
 		return;
 		
-	document.getElementById("to").value = members;
-	document.getElementsByName("subject")[0].value = "SOS!";
-	document.getElementsByName("text")[0].value = message;
-	document.getElementsByName("h")[0].value;
+	var to		= document.getElementById("to");
+	if( to && members )
+		to.value = members;
+	
+	var subject = document.getElementsByName("subject")[0];
+	if( subject )
+		subject.value = "SOS!";
+	
+	var text	= document.getElementsByName("text")[0];
+	if( text && message )
+		text.value = message;
+	
+	var h		= document.getElementsByName("h")[0].value;
 	// CO TI JEBE
 })();
