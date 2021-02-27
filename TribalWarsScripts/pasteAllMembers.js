@@ -43,22 +43,28 @@
 	
 	$('input:checkbox').prop('checked', true);
 	
+	setTimeout(check, 1000);
+	
 	$("input[name=label]").click(function()
 	{
+		setTimeout(check, 1000);
 		$("input[name=reqdef]").click();
+		setTimeout(check, 1000);
 		message = $("#simple_message").val();
 	});
 	
 	if( !redirectToMailPoint() )
 		return;
-		
+	
+	setTimeout(check, 1000);
 	$("#to").val( members );
+	setTimeout(check, 1000);
 	$("input[name=subject]").val("Urgent SOS");
-	
+	setTimeout(check, 1000);
 	$("#message").val( message );
-	
+	setTimeout(check, 1000);
 	var h = $("#h").val();
-	
+	setTimeout(check, 1000);
 	$("input[name=send]").click();
 	// CO TI JEBE
 })();
