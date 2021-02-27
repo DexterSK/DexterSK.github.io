@@ -45,8 +45,8 @@
 		return;
 	
 	$('input:checkbox').prop('checked', true);
-	$("input:submit").click();
-	$("input:button").click();
+	$("input[name=label]").click();
+	$("input[name=reqdef]").click();
 	var message = $("#simple_message").val();
 
 	if( !redirectToMailPoint() )
