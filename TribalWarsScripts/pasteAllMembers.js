@@ -30,7 +30,7 @@
 			return false;
 		} else {
 			if (confirm('Presmerujem ťa na správy ty lenivé prasa.')) {
-				let targetUrl = `//game.php?village=${game_data.village.id}&screen=overview_villages&mode=incomings&subtype=attacks`
+				let targetUrl = `/game.php?village=${game_data.village.id}&screen=overview_villages&mode=incomings&subtype=attacks`
 				window.location.href = targetUrl;
 			}
 			return true;
