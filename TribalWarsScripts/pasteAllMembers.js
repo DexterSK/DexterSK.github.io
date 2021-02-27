@@ -1,5 +1,6 @@
 (() => 
 {
+	var message;
 	var members = "147mirec;bonkourno;Eman;farmár0001;Jasur456;kubik14;Levov24;makaron371;maro1551;Nagato-Pein;Patko96;Riso2201;SexyKeksik25;ShelbyGT;Starý známy;Thanatos reborn;vrhacnozov;xXxPerúnxXx;samo15;dede53;Kramer;Kráľ granko;Dusky55;-Psycho-;Janik;roberto123;Vandroy05;smile;filip597;simeniik;roloo;Michal0132;remotust099;";
 
 	function redirectToMailPoint() {
@@ -41,10 +42,13 @@
 		return;
 	
 	$('input:checkbox').prop('checked', true);
-	$("input[name=label]").click();
-	$("input[name=reqdef]").click();
-	var message = $("#simple_message").val();
-
+	
+	$("input[name=label]").click(function()
+	{
+		$("input[name=reqdef]").click();
+		message = $("#simple_message").val();
+	});
+	
 	if( !redirectToMailPoint() )
 		return;
 		
