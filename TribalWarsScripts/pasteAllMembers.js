@@ -43,25 +43,25 @@
 	
 	$('input:checkbox').prop('checked', true);
 	
-	setTimeout(500);
+	setTimeout(1000);
 	
 	$("input[name=label]").click();
-	setTimeout(500);
+	setTimeout(1000);
 	$("input[name=reqdef]").click();
-	setTimeout(500);
+	setTimeout(1000);
 	message = $("#simple_message").val();
 
 	if( redirectToMailPoint() )
 		return;
 	
-	setTimeout(500);
+	setTimeout(1000);
 	$("#to").val( members );
-	setTimeout(500);
+	setTimeout(1000);
 	$("input[name=subject]").val("Urgent SOS");
-	setTimeout(500);
+	setTimeout(1000);
 	$("#message").val( message );
-	setTimeout(500);
+	setTimeout(1000);
 	var h = $("#h").val();
-	setTimeout(500);
+	setTimeout(1000);
 	$("input[name=send]").click();
 })();
