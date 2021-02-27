@@ -34,49 +34,27 @@ function redirectToIncomingsPoint() {
 	}
 }
 
-$( document ).ready(function()
+var check function()
 {
-	if( redirectToIncomingsPoint() )
-		return;
-	
-	$('input:checkbox').prop('checked', true);
-	setTimeout(5000);
-	
-	$("input[name=label]").click();
-	setTimeout(5000);
-
-	$("input[name=reqdef]").click();
-	setTimeout(5000);
-	
-	message = $("#simple_message").val();
-	setTimeout(5000);
-
-	if( redirectToMailPoint() )
-		return;
-	
-	$("#to").val( members );
-	setTimeout(5000);
-	
-	$("input[name=subject]").val("Urgent SOS");
-	setTimeout(5000);
-	
-	$("#message").val( message );
-	setTimeout(5000);
-
-	$("input[name=send]").click();
-
-
-	
-	//var h = $("#h").val();
-	/*if(condition)
+	if( !redirectToIncomingsPoint )
 	{
-		// run when condition is met
+		$('input:checkbox').prop('checked', true);
+		$("input[name=label]").click();
+		$("input[name=reqdef]").click();
+		message = $("#simple_message").val();
+
+		if( redirectToMailPoint() )
+		{
+			$("#to").val( members );
+			$("input[name=subject]").val("Urgent SOS");	
+			$("#message").val( message );
+			$("input[name=send]").click();
+			//var h = $("#h").val();
+		}
 	}
 	else
-	{
 		setTimeout(check, 1000); // check again in a second
-	}*/
-});
+};
 
 
 
