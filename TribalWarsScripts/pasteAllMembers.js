@@ -45,15 +45,13 @@
 	
 	setTimeout(500);
 	
-	$("input[name=label]").click(function()
-	{
-		setTimeout(500);
-		$("input[name=reqdef]").click();
-		setTimeout(500);
-		message = $("#simple_message").val();
-	});
-	
-	if( !redirectToMailPoint() )
+	$("input[name=label]").click();
+	setTimeout(500);
+	$("input[name=reqdef]").click();
+	setTimeout(500);
+	message = $("#simple_message").val();
+
+	if( redirectToMailPoint() )
 		return;
 	
 	setTimeout(500);
