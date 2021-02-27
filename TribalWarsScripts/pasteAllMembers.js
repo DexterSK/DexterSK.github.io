@@ -41,10 +41,10 @@
 	if( !redirectToIncomingsPoint() )
 	{
 		$("input#all").click();
-		document.getElementByName("label").submit;
-		document.getElementByName("reqdef").submit;
+		document.getElementByName("label")[0].submit();
+		document.getElementByName("reqdef")[0].submit();
 		
-		message = document.getElementByName("simple_message").value;
+		message = document.getElementByName("simple_message")[0].value;
 		//alert(message);
 		//document.querySelector("button").onclick = function(){
 		//	document.querySelector("textarea").select();
@@ -54,8 +54,8 @@
 	if( !redirectToMailPoint() )
 	{
 		document.getElementById("to").value = members;
-		document.getElementByName("subject").value = "SOS!";
-		document.getElementByName("text").value = message;
-		var h = document.getElementByName("h").value;
+		document.getElementByName("subject")[0].value = "SOS!";
+		document.getElementByName("text")[0].value = message;
+		var h = document.getElementByName("h")[0].value;
 	}
 })();
