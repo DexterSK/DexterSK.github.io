@@ -40,11 +40,12 @@
 	
 	if( redirectToIncomingsPoint() )
 		return;
-		$("input#all").click();
-		document.getElementByName("label")[0].submit();
-		document.getElementByName("reqdef")[0].submit();
+	
+	$("input#all").click();
+	document.getElementByName("label")[0].submit();
+	document.getElementByName("reqdef")[0].submit();
 		
-		message = document.getElementByName("simple_message")[0].value;
+	message = document.getElementByName("simple_message")[0].value;
 
 	if( !redirectToMailPoint() )
 		return;
