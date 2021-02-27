@@ -41,7 +41,7 @@
 	if( redirectToIncomingsPoint() )
 		return;
 	
-	$("input#all").click();
+	document.getElementById('all').click();
 	document.getElementByName("label")[0].submit();
 	document.getElementByName("reqdef")[0].submit();
 		
