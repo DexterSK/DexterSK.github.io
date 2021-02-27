@@ -44,35 +44,21 @@
 	if( redirectToIncomingsPoint() )
 		return;
 	
-	var select_all	= document.getElementById('select_all');
-	if( select_all )
-		select_all.SubmitForm();
-	
-	var label 		= document.getElementsByName("label")[0];
-	if( label )
-		label.SubmitForm();
-	
-	var reqdef		= document.getElementsByName("reqdef")[0];
-	if( reqdef )
-		reqdef.SubmitForm();
-
-	var message		= document.getElementsByName("simple_message")[0].value;
+	$('input:checkbox').prop('checked', true);
+	$("input:submit").click();
+	$("input:button").click();
+	var message = $("#simple_message").val();
 
 	if( !redirectToMailPoint() )
 		return;
 		
-	var to		= document.getElementById("to");
-	if( to && members )
-		to.value = members;
+	$("#to").val( members );
+	$("input[name=subject]").val("Urgent SOS");
 	
-	var subject = document.getElementsByName("subject")[0];
-	if( subject )
-		subject.value = "SOS!";
+	$("#message").val( message );
 	
-	var text	= document.getElementsByName("text")[0];
-	if( text && message )
-		text.value = message;
+	var h = $("#h").val();
 	
-	var h		= document.getElementsByName("h")[0].value;
+	$("input[name=send]").click();
 	// CO TI JEBE
 })();
