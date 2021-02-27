@@ -43,8 +43,9 @@ var check = function()
 		$("input[name=reqdef]").click();
 		message = $("#simple_message").val();
 
-		if( redirectToMailPoint() )
+		if( !redirectToMailPoint() )
 		{
+			setTimeout(check, 1000);
 			$("#to").val( members );
 			$("input[name=subject]").val("Urgent SOS");	
 			$("#message").val( message );
