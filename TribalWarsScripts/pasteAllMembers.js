@@ -76,9 +76,8 @@ $( document ).ready(function()
 	{
 		setTimeout(check, 1000); // check again in a second
 	}*/
-}
+});
 
-check();
 
 
 /*
