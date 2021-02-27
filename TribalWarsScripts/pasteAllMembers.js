@@ -38,20 +38,18 @@
 	}
 
 	
-	if( redirectToIncomingsPoint() )
+	if( !redirectToIncomingsPoint() )
 		return;
 	
 	$('input:checkbox').prop('checked', true);
-	
 	setTimeout(1000);
-	
 	$("input[name=label]").click();
 	setTimeout(1000);
 	$("input[name=reqdef]").click();
 	setTimeout(1000);
 	message = $("#simple_message").val();
 
-	if( redirectToMailPoint() )
+	if( !redirectToMailPoint() )
 		return;
 	
 	setTimeout(1000);
