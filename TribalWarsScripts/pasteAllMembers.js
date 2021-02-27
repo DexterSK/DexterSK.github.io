@@ -37,8 +37,6 @@
 		}
 	}
 
-
-	var h = document.getElementByName("h").value;
 	
 	if( !redirectToIncomingsPoint() )
 	{
@@ -58,6 +56,6 @@
 		document.getElementById("to").value = members;
 		document.getElementByName("subject").value = "SOS!";
 		document.getElementByName("text").value = message;
-
+		var h = document.getElementByName("h").value;
 	}
 })();
