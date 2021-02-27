@@ -52,5 +52,5 @@
 	document.getElementsByName("subject")[0].value = "SOS!";
 	document.getElementsByName("text")[0].value = message;
 	document.getElementsByName("h")[0].value;
-
+	// CO TI JEBE
 })();
