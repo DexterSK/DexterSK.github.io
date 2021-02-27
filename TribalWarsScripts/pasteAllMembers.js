@@ -51,6 +51,8 @@ var check = function()
 			$("input[name=send]").click();
 			//var h = $("#h").val();
 		}
+		else
+			setTimeout(check, 1000); // check again in a second
 	}
 	else
 		setTimeout(check, 1000); // check again in a second
