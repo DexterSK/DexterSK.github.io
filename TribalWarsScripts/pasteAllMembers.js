@@ -41,7 +41,7 @@
 	if( redirectToIncomingsPoint() )
 		return;
 	
-	document.getElementById('all').onclick();
+	document.getElementById('select_all').onclick();
 	document.getElementByName("label")[0].submit();
 	document.getElementByName("reqdef")[0].submit();
 		
