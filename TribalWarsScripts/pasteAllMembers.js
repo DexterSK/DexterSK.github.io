@@ -34,7 +34,7 @@ function redirectToIncomingsPoint() {
 	}
 }
 
-var check
+var check = function()
 {
 	if( !redirectToIncomingsPoint )
 	{
