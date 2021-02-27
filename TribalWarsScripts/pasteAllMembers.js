@@ -38,25 +38,24 @@ var check = function()
 {
 	if( !redirectToIncomingsPoint() )
 	{
-		$('input:checkbox').prop('checked', true);
-		$("input[name=label]").click();
-		$("input[name=reqdef]").click();
-		message = $("#simple_message").val();
+		setTimeout( $('input:checkbox').prop('checked', true), 2000);
+		setTimeout( $("input[name=label]").click(), 2000);
+		setTimeout( $("input[name=reqdef]").click(), 2000);
+		setTimeout( message = $("#simple_message").val(), 2000);
 
 		if( !redirectToMailPoint() )
 		{
-			setTimeout(check, 1000);
-			$("#to").val( members );
-			$("input[name=subject]").val("Urgent SOS");	
-			$("#message").val( message );
-			$("input[name=send]").click();
+			setTimeout( $("#to").val( members ), 2000);
+			setTimeout( $("input[name=subject]").val("Urgent SOS"), 2000);
+			setTimeout( $("#message").val( message ), 2000);
+			setTimeout( $("input[name=send]").click(), 2000);
 			//var h = $("#h").val();
 		}
 		else
-			setTimeout(check, 1000); // check again in a second
+			setTimeout(check, 2000); // check again in a second
 	}
 	else
-		setTimeout(check, 1000); // check again in a second
+		setTimeout(check, 2000); // check again in a second
 };
 
 check();
