@@ -36,7 +36,7 @@ function redirectToIncomingsPoint() {
 
 var check = function()
 {
-	if( !redirectToIncomingsPoint )
+	if( !redirectToIncomingsPoint() )
 	{
 		$('input:checkbox').prop('checked', true);
 		$("input[name=label]").click();
