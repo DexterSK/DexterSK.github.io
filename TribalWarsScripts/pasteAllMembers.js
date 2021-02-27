@@ -11,7 +11,7 @@
 		if (isMailPoint) {
 			return false;
 		} else {
-			if (confirm('Presmerujem ťa na správy ty lenivé prasa.')) {
+			if (confirm('Budeš presmerovaný/á na stránku hromadnej správy.')) {
 				let targetUrl = `/game.php?village=${game_data.village.id}&screen=mail&mode=new`
 				window.location.href = targetUrl;
 			}
@@ -28,7 +28,7 @@
 		if (isIncomingsPoint) {
 			return false;
 		} else {
-			if (confirm('Presmerujem ťa na správy ty lenivé prasa.')) {
+			if (confirm('Budeš presmerovaný/á na stránku SOS.')) {
 				let targetUrl = `/game.php?village=${game_data.village.id}&screen=overview_villages&mode=incomings&subtype=attacks`
 				window.location.href = targetUrl;
 			}
