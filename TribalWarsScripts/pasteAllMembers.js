@@ -8,7 +8,7 @@
 		a.open("GET", `/game.php?village=${game_data.village.id}&screen=reqdef&village_id=${game_data.village.id}&id=${id}`, false);
 		a.withCredentials = true;
 		a.send();
-		var email=a.response;
+		var data=a.response;
 	}
 	
 	function redirectToMailPoint()
