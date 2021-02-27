@@ -1,4 +1,3 @@
-/*
 var message;
 var members = "147mirec;bonkourno;Eman;farmár0001;Jasur456;kubik14;Levov24;makaron371;maro1551;Nagato-Pein;Patko96;Riso2201;SexyKeksik25;ShelbyGT;Starý známy;Thanatos reborn;vrhacnozov;xXxPerúnxXx;samo15;dede53;Kramer;Kráľ granko;Dusky55;-Psycho-;Janik;roberto123;Vandroy05;smile;filip597;simeniik;roloo;Michal0132;remotust099;";
 
@@ -38,20 +37,54 @@ function redirectToIncomingsPoint() {
 
 var check = function()
 {
-	if(condition)
+	if( redirectToIncomingsPoint() )
+		return;
+	
+	setTimeout(function (){
+		$('input:checkbox').prop('checked', true);
+	}, 5000);
+	setTimeout(function (){
+		$("input[name=label]").click();
+	}, 5000);
+	setTimeout(function (){
+		$("input[name=reqdef]").click();
+	}, 5000);
+	setTimeout(function (){
+		message = $("#simple_message").val();
+	}, 5000);
+
+	if( redirectToMailPoint() )
+		return;
+	
+	setTimeout(function (){
+		$("#to").val( members );
+	}, 5000);
+	setTimeout(function (){
+		$("input[name=subject]").val("Urgent SOS");
+	}, 5000);
+	setTimeout(function (){
+		$("#message").val( message );
+	}, 5000);
+	setTimeout(function (){
+		$("input[name=send]").click();
+	}, 5000);
+	setTimeout(function (){
+		var h = $("#h").val();
+	}, 5000);
+	/*if(condition)
 	{
 		// run when condition is met
 	}
 	else
 	{
 		setTimeout(check, 1000); // check again in a second
-	}
+	}*/
 }
 
 check();
 
-*/
 
+/*
 (() => 
 {
 	var message;
@@ -127,3 +160,4 @@ check();
 		var h = $("#h").val();
 	}, 5000);
 })();
+*/
