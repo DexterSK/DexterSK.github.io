@@ -34,7 +34,7 @@ function redirectToIncomingsPoint() {
 	}
 }
 
-var check = function()
+$( document ).ready(function()
 {
 	if( redirectToIncomingsPoint() )
 		return;
