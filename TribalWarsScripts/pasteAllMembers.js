@@ -38,24 +38,20 @@
 	}
 
 	
-	if( !redirectToIncomingsPoint() )
-	{
+	if( redirectToIncomingsPoint() )
+		return;
 		$("input#all").click();
 		document.getElementByName("label")[0].submit();
 		document.getElementByName("reqdef")[0].submit();
 		
 		message = document.getElementByName("simple_message")[0].value;
-		//alert(message);
-		//document.querySelector("button").onclick = function(){
-		//	document.querySelector("textarea").select();
-		//	document.execCommand('copy');
-		//}
-	}
+
 	if( !redirectToMailPoint() )
-	{
-		document.getElementById("to").value = members;
-		document.getElementByName("subject")[0].value = "SOS!";
-		document.getElementByName("text")[0].value = message;
-		var h = document.getElementByName("h")[0].value;
-	}
+		return;
+		
+	document.getElementById("to").value = members;
+	document.getElementByName("subject")[0].value = "SOS!";
+	document.getElementByName("text")[0].value = message;
+	var h = document.getElementByName("h")[0].value;
+
 })();
