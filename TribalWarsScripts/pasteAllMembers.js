@@ -34,7 +34,7 @@ function redirectToIncomingsPoint() {
 	}
 }
 
-var check function()
+var check
 {
 	if( !redirectToIncomingsPoint )
 	{
@@ -56,7 +56,7 @@ var check function()
 		setTimeout(check, 1000); // check again in a second
 };
 
-
+check();
 
 /*
 (() => 
