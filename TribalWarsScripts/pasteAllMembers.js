@@ -12,10 +12,10 @@ function redirectToMailPoint() {
 	if (isMailPoint) {
 		return false;
 	} else {
-		if (confirm('Budeš presmerovaný/á na stránku hromadnej správy.')) {
+		//if (confirm('Budeš presmerovaný/á na stránku hromadnej správy.')) {
 			let targetUrl = `/game.php?village=${game_data.village.id}&screen=mail&mode=new`
 			window.location.href = targetUrl;
-		}
+		//}
 		return true;
 	}
 }
@@ -26,10 +26,10 @@ function redirectToIncomingsPoint() {
 	if (isIncomingsPoint) {
 		return false;
 	} else {
-		if (confirm('Budeš presmerovaný/á na stránku SOS.')) {
+		//if (confirm('Budeš presmerovaný/á na stránku SOS.')) {
 			let targetUrl = `/game.php?village=${game_data.village.id}&screen=overview_villages&mode=incomings&subtype=attacks`
 			window.location.href = targetUrl;
-		}
+		//}
 		return true;
 	}
 }
