@@ -34,28 +34,66 @@ function redirectToIncomingsPoint() {
 	}
 }
 
+function SelectAllCommAndMark()
+{
+	setTimeout( $('input:checkbox').prop('checked', true), 2000);
+	setTimeout( $("input[name=label]").click(), 2000);
+}
+
+function SelectTextAndSave()
+{
+	setTimeout( $("input[name=reqdef]").click(), 2000);
+	setTimeout( message = $("#simple_message").val(), 2000);
+}
+
+function FillReceivers()
+{
+	setTimeout( $("#to").val( members ), 2000);
+}
+
+function FillSubject()
+{
+	setTimeout( $("input[name=subject]").val("Urgent SOS"), 2000);
+}
+
+function FillMessage()
+{
+	setTimeout( $("#message").val( message ), 2000);	
+}
+
+function SubmitForm()
+{
+	setTimeout( $("input[name=send]").click(), 2000);
+}
+
 var check = function()
 {
 	if( !redirectToIncomingsPoint() )
 	{
-		setTimeout( $('input:checkbox').prop('checked', true), 2000);
-		setTimeout( $("input[name=label]").click(), 2000);
-		setTimeout( $("input[name=reqdef]").click(), 2000);
-		setTimeout( message = $("#simple_message").val(), 2000);
+		//setTimeout( $('input:checkbox').prop('checked', true), 2000);
+		//setTimeout( $("input[name=label]").click(), 2000);
+		SelectAllCommAndMark();
+		SelectTextAndSave();
+		//setTimeout( $("input[name=reqdef]").click(), 2000);
+		//setTimeout( message = $("#simple_message").val(), 2000);
 
 		if( !redirectToMailPoint() )
 		{
-			setTimeout( $("#to").val( members ), 2000);
-			setTimeout( $("input[name=subject]").val("Urgent SOS"), 2000);
-			setTimeout( $("#message").val( message ), 2000);
-			setTimeout( $("input[name=send]").click(), 2000);
+			FillReceivers();
+			FillSubject();
+			FillMessage();
+			SubmitForm();
+			//setTimeout( $("#to").val( members ), 2000);
+			//setTimeout( $("input[name=subject]").val("Urgent SOS"), 2000);
+			//setTimeout( $("#message").val( message ), 2000);
+			//setTimeout( $("input[name=send]").click(), 2000);
 			//var h = $("#h").val();
 		}
-		else
-			setTimeout(check, 2000); // check again in a second
+		//else
+		//	setTimeout(check, 2000); // check again in a second
 	}
-	else
-		setTimeout(check, 2000); // check again in a second
+	//else
+	//	setTimeout(check, 2000); // check again in a second
 };
 
 check();
