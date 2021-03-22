@@ -1,4 +1,4 @@
-﻿javascript: $(function()
+﻿$(function()
 {
 	/* Change the world */
 	var world = 'https://sk66.divoke-kmene.sk/game.php?screen=ally&mode=members_troops'
