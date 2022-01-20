@@ -32,7 +32,21 @@
 		
 		
 		pasteAllMembers <div style="display: inline-block;" id="appendpasteAllMembers"></div><br>
-		<textarea onclick="onClick('pasteAllMembers');" id="pasteAllMembers" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/pasteAllMembers.js');</textarea><br><br>
+		<textarea onclick="onClick('pasteAllMembers');" id="pasteAllMembers" style="width: 800px; height: 24px;">
+		javascript:
+		window.playerVillageCoords = 'xxx|yyy xxx|yyy';
+		window.playerFarmSettings=[];
+		window.playerFarmSettings.allowedTroops=[
+					[
+						{ name: 'light', min: 5, max: 75 }
+					],
+					[
+						{ name: 'spear', min: 25, max: 75 },
+						{ name: 'sword', min: 25, max: 25 }
+					]
+				];
+		$.getScript('https://dextersk.github.io/TribalWarsScripts/playerFarm.js');
+		</textarea><br><br>
 		
 		
 		playerFarm <div style="display: inline-block;" id="appendplayerFarm"></div><br>
