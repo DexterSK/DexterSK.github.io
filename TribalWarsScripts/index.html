@@ -4,7 +4,7 @@
 		<style>
 		body
 		{
-			font-family: monospace;
+			font-family: system-ui;
 		}
 		h2 {
 			text-align: center;
@@ -27,35 +27,55 @@
 	</head>
 	<body>
 		<h2>DexterSK TribalWarsScripts collection</h2>
-		
-	
+
 		<h3 class="barbsFinder">Hľadač barbarských dedín</h3>
 		<div style="display: inline-block;" id="appendbarbsFinder"></div><br>
-		<p><b>Predstavenie skriptu</b><br>
-		Tento skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.<br><br>
+		<p>
+			<b>Predstavenie skriptu</b><br>
+			Tento skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.<br><br>
 
-		<b>Použitie skriptu</b><br>
-		<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
-		<b>2.</b> Otvorte si akúkoľvek stránku, napr. náhľad dediny.<br>
-		<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br>
-		<b>4.</b> Zadajte požadované parametre a kliknite na "Filter".<br><br>
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/barbsFinder.js');</textarea><br>
+			<b>2.</b> Otvorte si akúkoľvek stránku, napr. náhľad dediny.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br>
+			<b>4.</b> Zadajte požadované parametre a kliknite na "Filter".<br><br>
 
-		<b>Ďalšie informácie</b><br>
-		Dediny sa zobrazia buď ako zoznam súradníc, alebo tabuľka, v ktorej môžete kliknúť buď na názov dediny, alebo na "Útok", čo vás presunie do vášho nádvoria.<br>
-		Kliknutím na "Reset" vynulujete nastavené filtre.
+			<b>Ďalšie informácie</b><br>
+			Dediny sa zobrazia buď ako zoznam súradníc, alebo tabuľka, v ktorej môžete kliknúť buď na názov dediny, alebo na "Útok", čo vás presunie do vášho nádvoria.<br>
+			Kliknutím na "Reset" vynulujete nastavené filtre.
 		</p>
-		<br>
-		<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/barbsFinder.js');</textarea><br><br>
-		
-		
-		
-		
-		
-		
-		
-		
-		extendedPlayerInfo <div style="display: inline-block;" id="appendextendedPlayerInfo"></div><br>
-		<textarea readonly onclick="onClick('extendedPlayerInfo');" id="extendedPlayerInfo" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/extendedPlayerInfo.js');</textarea><br><br>
+
+		<h3 class="extendedPlayerInfo">extendedPlayerInfo</h3>
+		<div style="display: inline-block;" id="appendextendedPlayerInfo"></div><br>
+		<p>
+			<b>Predstavenie skriptu</b><br>
+			Tento skript zobrazí na profile hráča údaje z twstats.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/extendedPlayerInfo.js');</textarea><br>
+			<b>2.</b> Otvorte si profil hráča.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-
+		</p>
+
+		<h3 class="farmingEfficiencyCalculator">farmingEfficiencyCalculator</h3>
+		<div style="display: inline-block;" id="appendfarmingEfficiencyCalculator"></div><br>
+		<p>
+			<b>Predstavenie skriptu</b><br>
+			Tento skript vypočíta efektívnosť vašich rabovacích útokov.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/farmingEfficiencyCalculator.js');</textarea><br>
+			<b>2.</b> Otvorte si Útoky na stránke s oznámeniami (funguje zložka >Nové oznámenia< i [Pomocník na farmenie]).<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			Chvíľku trvá, než skript vypočíta efektívnosť farmenia zo všetkých vašich oznámení, tak buďte trpezliví.
+		</p>
+
 		
 		
 		farmingEfficiencyCalculator <div style="display: inline-block;" id="appendfarmingEfficiencyCalculator"></div><br>
