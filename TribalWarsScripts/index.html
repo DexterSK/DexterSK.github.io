@@ -1,27 +1,56 @@
-<html>
+<html lang="sk">
 	<head>
 		<title>xx</title>
+		<style>
+		body
+		{
+			font-family: cursive;
+		}
+		h2 {
+			text-align: center;
+		}
+		h3 {
+
+		}
+		p {
+		    background-color: aqua;
+			border: 1px solid gray;
+			padding: 5px;
+		}
+		
+		.alert
+		{
+			display: inline-block;
+		}
+		</style>
 	</head>
 	<body>
 		<h2>DexterSK TribalWarsScripts collection</h2>
 		
-		
+	
+		<h3>Hľadač barbarských dedín</h3>
+		<div style="display: inline-block;" id="appendbarbsFinder"></div><br>
+		<p><b>Predstavenie skriptu</b><br>
+		Tento skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.<br><br>
 
-		barbsFinder <div style="display: inline-block;" id="appendbarbsFinder"></div><br>
-		<p>Hľadač barbarských dedín
-		<b>Predstavenie skriptu</b>
-		Tento skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.
+		<b>Použitie skriptu</b><br>
+		<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+		<b>2.</b> Otvorte si akúkoľvek stránku, napr. náhľad dediny.<br>
+		<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br>
+		<b>4.</b> Zadajte požadované parametre a kliknite na "Filter".<br><br>
 
-		<b>Použitie skriptu</b>
-		<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.
-		<b>2.</b> Otvorte si akúkoľvek stránku, napr. náhľad dediny.
-		<b>3.</b> Kliknite na skript z rýchleho náhľadu.
-		<b>4.</b> Zadajte požadované parametre a kliknite na "Filter".
-
-		Ďalšie informácie
-		Dediny sa zobrazia buď ako zoznam súradníc, alebo tabuľka, v ktorej môžete kliknúť buď na názov dediny, alebo na "Útok", čo vás presunie do vášho nádvoria. Kliknutím na "Reset" vynulujete nastavené filtre.
-		</p><br>
+		<b>Ďalšie informácie</b><br>
+		Dediny sa zobrazia buď ako zoznam súradníc, alebo tabuľka, v ktorej môžete kliknúť buď na názov dediny, alebo na "Útok", čo vás presunie do vášho nádvoria.<br>
+		Kliknutím na "Reset" vynulujete nastavené filtre.
+		</p>
+		<br>
 		<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/barbsFinder.js');</textarea><br><br>
+		
+		
+		
+		
+		
+		
 		
 		
 		extendedPlayerInfo <div style="display: inline-block;" id="appendextendedPlayerInfo"></div><br>
@@ -117,7 +146,7 @@
 				var append = "append" + id;
 				var div = document.getElementById( append );
 				div.innerHTML = 'Script bol úspešne skopírovaný do clipboardu';
-				div.style.background = "green";
+				div.style.background = "lime";
 			}
 		}
 		</script>
