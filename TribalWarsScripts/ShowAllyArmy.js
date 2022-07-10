@@ -31,8 +31,8 @@
 
 	/* Iterate all selectable players */
 		$.each($('select[name=player_id] option:not([disabled],[hidden])'), function( index, opt ) {
-			alert(index);
-			alert(opt.value);
+			//alert(index);
+			//alert(opt.value);
 			setTimeout(function() {
 				$.get(world+'&player_id='+opt.value, parse_troop_counts);
 			}, 500 * index);
