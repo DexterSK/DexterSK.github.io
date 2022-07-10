@@ -78,7 +78,14 @@ if( show_ODD == true )
 
 for( i = 1;i < rows.length - 1 + plus_one;i++ )
 {
-	pid = rows.getElementsByTagName("a")[0].toString().match(/id=\d+/).toString().split( "=")[1];
+	var s1 = rows.getElementsByTagName("a")[0].toString();
+	alert( s1 );
+	
+	var s2 = s1.match(/id=\d+/).toString();
+	alert( s2 );
+	
+	pid = s2.split( "=")[1];
+	alert( pid );
 	
 	if (show_points == true)
 	{
