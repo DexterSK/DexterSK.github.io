@@ -78,8 +78,8 @@ if( show_ODD == true )
 
 for( i = 1;i < rows.length - 1 + plus_one;i++ )
 {
-	alert(rows.length);
-	alert(rows.toString());
+	alert(rows.length);//26
+	alert(rows.toString());//object hrml collection
 	
 	var s1 = rows.getElementsByTagName("a")[0].toString();
 	alert( s1 );
