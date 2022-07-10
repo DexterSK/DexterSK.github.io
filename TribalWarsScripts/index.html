@@ -10,7 +10,7 @@
 			text-align: center;
 		}
 		h3 {
-
+			cursor: pointer;
 		}
 		p {
 		    background-color: aqua;
@@ -28,11 +28,11 @@
 	<body>
 		<h2>DexterSK TribalWarsScripts collection</h2>
 
-		<h3 class="barbsFinder">Hľadač barbarských dedín</h3>
+		<h3 onclick="show('barbsFinder');">barbsFinder</h3>
 		<div style="display: inline-block;" id="appendbarbsFinder"></div><br>
-		<p>
+		<p class="barbsFinder" style="display:none;">
 			<b>Predstavenie skriptu</b><br>
-			Tento skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.<br><br>
+			Skript vám vyfiltruje a zobrazí zoznam barbarských dedín, ktoré spĺňajú vami zadané parametre.<br><br>
 
 			<b>Použitie skriptu</b><br>
 			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
@@ -46,116 +46,261 @@
 			Kliknutím na "Reset" vynulujete nastavené filtre.
 		</p>
 
-		<h3 class="extendedPlayerInfo">extendedPlayerInfo</h3>
+
+
+		<h3 onclick="show('extendedPlayerInfo');">extendedPlayerInfo</h3>
 		<div style="display: inline-block;" id="appendextendedPlayerInfo"></div><br>
-		<p>
+		<p class="extendedPlayerInfo" style="display:none;">
 			<b>Predstavenie skriptu</b><br>
-			Tento skript zobrazí na profile hráča údaje z twstats.<br><br>
+			Skript zobrazí na profile hráča údaje z twstats.<br><br>
 
 			<b>Použitie skriptu</b><br>
 			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
-			<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/extendedPlayerInfo.js');</textarea><br>
+			<textarea readonly onclick="onClick('extendedPlayerInfo');" id="extendedPlayerInfo" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/extendedPlayerInfo.js');</textarea><br>
 			<b>2.</b> Otvorte si profil hráča.<br>
 			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
 			<b>Ďalšie informácie</b><br>
 			-
 		</p>
 
-		<h3 class="farmingEfficiencyCalculator">farmingEfficiencyCalculator</h3>
+		<h3 onclick="show('farmingEfficiencyCalculator');">farmingEfficiencyCalculator</h3>
 		<div style="display: inline-block;" id="appendfarmingEfficiencyCalculator"></div><br>
-		<p>
+		<p class="farmingEfficiencyCalculator" style="display:none;">
 			<b>Predstavenie skriptu</b><br>
-			Tento skript vypočíta efektívnosť vašich rabovacích útokov.<br><br>
+			Skript vypočíta efektívnosť vašich rabovacích útokov.<br><br>
 
 			<b>Použitie skriptu</b><br>
 			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
-			<textarea readonly onclick="onClick('barbsFinder');" id="barbsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/farmingEfficiencyCalculator.js');</textarea><br>
+			<textarea readonly onclick="onClick('farmingEfficiencyCalculator');" id="farmingEfficiencyCalculator" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/farmingEfficiencyCalculator.js');</textarea><br>
 			<b>2.</b> Otvorte si Útoky na stránke s oznámeniami (funguje zložka >Nové oznámenia< i [Pomocník na farmenie]).<br>
 			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
 			<b>Ďalšie informácie</b><br>
 			Chvíľku trvá, než skript vypočíta efektívnosť farmenia zo všetkých vašich oznámení, tak buďte trpezliví.
 		</p>
 
+		<h3 onclick="show('massScavenge');">massScavenge</h3>
+		<div style="display: inline-block;" id="appendmassScavenge"></div><br>
+		<p class="massScavenge" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript automaticky odošle jednotky zo všetkých dedín na zber surovín.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('massScavenge');" id="massScavenge" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/massScavenge.js');</textarea><br>
+			<b>2.</b> Prejdite na hromadný zber surovín alebo kliknite na skript z rýchleho náhľadu pre presmerovanie.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-.
+		</p>
+
+		<h3 onclick="show('Scavenging');">Scavenging</h3>
+		<div style="display: inline-block;" id="appendScavenging"></div><br>
+		<p class="Scavenging" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript automaticky vyplní jednotky na zber surovín podľa zadaného kritéria.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('Scavenging');" id="Scavenging" style="width: 800px; height: 100px;">javascript:
+(window.TwCheese && TwCheese.tryUseTool('ASS'))
+|| $.ajax('https://dextersk.github.io/TribalWarsScripts/TwCheese/launch/ASS.js?'
++~~((new Date())/3e5),{cache:1,dataType:"script"});void 0;
+			</textarea><br>
+			<b>2.</b> Prejdite na zber surovín alebo kliknite na skript z rýchleho náhľadu pre presmerovanie.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-.
+		</p>
+
+		
+		<h3 onclick="show('playerFarm');">playerFarm</h3>
+		<div style="display: inline-block;" id="appendplayerFarm"></div><br>
+		<p class="playerFarm" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript vyplní prednastavené hodnoty armády a zvýrázní tlačidlo útok.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('playerFarm');" id="playerFarm" style="width: 800px; height: 216px;">
+javascript:
+window.playerVillageCoords = 'xxx|yyy xxx|yyy'; //Suradnice generovane z barbs findera
+window.playerFarmSettings=[];
+window.playerFarmSettings.allowedTroops=[
+	[
+		/*
+		NAZVY JEDNOTIEK
+		pechota:
+			spear - kopia
+			sword - šerm
+			axe - sekera
+			archer - luk
+		jazda:
+			spy - špeh
+			light - LJ
+			marcher - LNK
+			heavy - TK
+			
+		dielna:
+			ram - baran
+			catapult - kat
+		*/
+		{ name: 'light', min: 5, max: 5 } //nazov jednotky a min a max pocet
+		{ name: 'spy', min: 1, max: 1 } //nazov jednotky a min a max pocet
+		// script odošle 5lj a 1špeh (upravte podla seba)
+	]
+];
+$.getScript('https://dextersk.github.io/TribalWarsScripts/playerFarm.js');
+			</textarea><br>
+			<b>2.</b> Prejdite na "Nádvorie" alebo kliknite na skript z rýchleho náhľadu pre presmerovanie.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-.
+		</p>
+		
+		<h3 onclick="show('ReportImporter');">ReportImporter</h3>
+		<div style="display: inline-block;" id="appendReportImporter"></div><br>
+		<p class="ReportImporter" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript vloží oznámenie o útoku/obrane do poznámky k dedine.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('ReportImporter');" id="ReportImporter" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ReportImporter.js');</textarea><br>
+			<b>2.</b> Otvorte si oznámenie, ktoré chcete pridať do poznámky k dedine.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			Ak ste útočník, tak skript vyexportuje správu s oznámením ako poznámku, ktorú priradí napadnutej dedine vo formáte: čas útoku + oznámenie, nachádzajúce sa v spoileri.<br>
+			Ak ste obranca, tak skript vyexportuje správu ako poznámku na útočníkovú dedinu vo formáte: čas útoku + útočiace vojsko + zostatkové vojsko. Poznámka je zaznamenaná na útočníkovej dedine.
+		</p>
+		
+		<h3 onclick="show('LAenhancer');">LAenhancer</h3>
+		<div style="display: inline-block;" id="appendLAenhancer"></div><br>
+		<p class="LAenhancer" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript vám umožňuje pohodlnejšie využívanie pomocníka na farmenie (nastavenie skriptu je v angličtine).<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('LAenhancer');" id="LAenhancer" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/LAenhancer.js');</textarea><br>
+			<b>2.</b> Otvorte si pomocníka na farmenie (kliknite na ikonku farm_assistent.png vľavo od rebríčkov).<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu (zobrazia sa vám nastavenia v angličtine).<br>
+			<b>4.</b> Nastavte svoje preferencie a vyšlite jednotky na farmenie.<br><br>
+			<b>Ďalšie informácie</b><br>
+			Skript obsahuje 3 hlavné funkcie: filtrovanie, načítanie stránky a klávesové príkazy. Máte možnosť načítať 1 stránku, prípadne všetky stránky, nastavením poslednej stránky na "max".<br>
+			Takže ak nastavíte "Load pages 1 to max", načítajú sa vám všetky stránky. Skript vám vždy zobrazí, ktorá stránka sa práve načítava.<br>
+			Ak máte zlé internetové pripojenie, načítanie stránky môže chvíľku trvať, takže bude lepšie, ak si dáte načítať menší počet stránok.<br>
+			Klikaním na A, B a C sa vždy skryje riadok s dedinou, na ktorú bol pomocou tlačítka poslaný útok.<br>
+			Ak sa vyskytne chyba, napr. "Nedostačujúci počet jednotiek." či "Je možné poslať maximálne 5 útokov za sekundu.", riadok sa znovu objaví a skript si nebude myslieť, že bol už farmený.<br>
+			Ak si nastavíte jednotlivé filtre, farmenie bude prebiehať ešte rýchlejšie, keďže nebudete musieť kontrolovať rôzne faktory, ako napríklad posledné oznámenie, stupeň opevnenia, predpokladané nožstvo surovín, alebo či bol uniesol posledný útok na danú dedinu plnú korisť, či iba jej časť.<br>
+			Ukázaním myši na "i" v bielom krúžku sa vám zobrazí ďalšie vysvetlenie v anglickom jazyku.<br>
+			Skript dokáže fungovať aj spolu so skriptom FA Keypress, čím môže byť posielanie farmiacich príkazov ešte rýchlejšie.
+		</p>
+		
+		<h3 onclick="show('FAKeyPress');">FAKeyPress</h3>
+		<div style="display: inline-block;" id="appendFAKeyPress"></div><br>
+		<p class="FAKeyPress" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript umožňuje priradenie klávesovej skratky k tlačítkam A, B a C v pomocníkovi na farmenie (nastavenie skriptu je v angličtine).<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('FAKeyPress');" id="FAKeyPress" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/FAKeyPress.js');</textarea><br>
+			<b>2.</b> Otvorte si pomocníka na farmenie (kliknite na ikonku farm_assistent.png vľavo od rebríčkov).<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu (v Settings - Show nájdete ďalšie nastavenia).<br>
+			<b>4.</b> Využívajte klávesové skratky pre tlačítka A, B a C, prípadne na preskočenie dediny (Skip - písmenko J).<br><br>
+			<b>Ďalšie informácie</b><br>
+			Skript by malo byť možné skombinovať so skriptom LA Enhancer.
+		</p>
+		
+		<h3 onclick="show('ShowMSnew');">ShowMSnew</h3>
+		<div style="display: inline-block;" id="appendShowMSnew"></div><br>
+		<p class="ShowMSnew" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript vám na konci zvolenej stránky zobrazí serverový čas priamo s milisekundami.<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('ShowMSnew');" id="ShowMSnew" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ShowMSnew.js');</textarea><br>
+			<b>2.</b> Otvorte si oznámenie, ktoré chcete pridať do poznámky k dedine.<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu.<br><br>
+			<b>Ďalšie informácie</b><br>
+			Výsledok sa zobrazí v spodnej časti stránky. Namiesto "Serverový čas: 11:09:23 26/05/2020" uvidíte "Serverový čas: 11:09:23:096 26/05/2020".<br>
+			Skript vám môže pomôcť okrem iného pohodlnejšie chytať nepriateľské šľachtické útoky (tzv. vláčiky).
+		</p>
+		
+		<h3 onclick="show('WHBalancer');">WHBalancer</h3>
+		<div style="display: inline-block;" id="appendWHBalancer"></div><br>
+		<p class="WHBalancer" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript spočíta vaše suroviny a rovnomerne vám ich pomôže rozposlať do všetkých vašich dedín (nastavenie skriptu je v angličtine).<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('WHBalancer');" id="WHBalancer" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/WHBalancer.js');</textarea><br>
+			<b>2.</b> Otvorte si akúkoľvek stránku v hre (napr. náhľad dediny).<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu (otvorí sa stránka so surovinami).<br>
+			<b>4.</b> Držte tlačítko Enter a rozposielajte svoje suroviny.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-
+		</p>
+		
+		<h3 onclick="show('nameVillages');">nameVillages</h3>
+		<div style="display: inline-block;" id="appendnameVillages"></div><br>
+		<p class="nameVillages" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript umožňuje hromadné premenovávanie vašich dedín (nastavenie skriptu je v angličtine).<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('nameVillages');" id="nameVillages" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/nameVillages.js');</textarea><br>
+			<b>2.</b> Otvorte si niektorý z náhľadov dedín, napr. "Produkcia".<br>
+			<b>3.</b> Kliknite na skript z rýchleho náhľadu (zobrazí sa vám nové okienko).<br>
+			<b>4.</b> Vyplňte svoje preferencie k hromadnému premenovaniu (čo nechcete použiť, necháte odškrtnuté).<br>
+			<b>5.</b> Vyberte, či chcete premenovať dediny úplne, alebo len pridať text na začiatok/koniec už pomenovaných dedín.<br>
+			<b>6.</b> Aktivujte hromadné premenovanie dedín pomocou tlačítka start naming villages.<br><br>
+			<b>Ďalšie informácie</b><br>
+			-
+		</p>
+		
+		<h3 onclick="show('SnobSnipe');">SnobSnipe</h3>
+		<div style="display: inline-block;" id="appendSnobSnipe"></div><br>
+		<p class="SnobSnipe" style="display:none;">
+			<b>Predstavenie skriptu</b><br>
+			Skript umožňuje hromadné premenovávanie vašich dedín (nastavenie skriptu je v angličtine).<br><br>
+
+			<b>Použitie skriptu</b><br>
+			<b>1.</b> Nasledujúci externý skript pridajte do svojho rýchleho náhľadu.<br>
+			<textarea readonly onclick="onClick('SnobSnipe');" id="SnobSnipe" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/SnobSnipe.js');</textarea><br>
+			<b>Ďalšie informácie</b><br>
+			-
+		</p>
 		
 		
-		farmingEfficiencyCalculator <div style="display: inline-block;" id="appendfarmingEfficiencyCalculator"></div><br>
-		<textarea readonly onclick="onClick('farmingEfficiencyCalculator');" id="farmingEfficiencyCalculator" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/farmingEfficiencyCalculator.js');</textarea><br><br>
 		
+		
+		
+		
+		<!--
 		
 		incomingTroopsVillageInfo <div style="display: inline-block;" id="appendincomingTroopsVillageInfo"></div><br>
 		<textarea readonly onclick="onClick('incomingTroopsVillageInfo');" id="incomingTroopsVillageInfo" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/incomingTroopsVillageInfo.js');</textarea><br><br>
-		
-		
-		massScavenge <div style="display: inline-block;" id="appendmassScavenge"></div><br>
-		<textarea readonly onclick="onClick('massScavenge');" id="massScavenge" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/massScavenge.js');</textarea><br><br>
-		
-		
-		Scavenging <div style="display: inline-block;" id="appendmassScavenge"></div><br>
-		<textarea readonly onclick="onClick('Scavenging');" id="Scavenging" style="width: 800px; height: 100px;">javascript:
-		(window.TwCheese && TwCheese.tryUseTool('ASS'))
-		|| $.ajax('https://dextersk.github.io/TribalWarsScripts/TwCheese/launch/ASS.js?'
-		+~~((new Date())/3e5),{cache:1,dataType:"script"});void 0;
-		</textarea><br><br>
-		
-		
-		
+
 		nightbonuspopup <div style="display: inline-block;" id="appendnightbonuspopup"></div><br>
 		<textarea readonly onclick="onClick('nightbonuspopup');" id="nightbonuspopup" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/nightbonuspopup.js');</textarea><br><br>
-		
-		
-		playerFarm <div style="display: inline-block;" id="appendpasteAllMembers"></div><br>
-		<textarea readonly onclick="onClick('playerFarm');" id="playerFarm" style="width: 800px; height: 216px;">
-		javascript:
-		window.playerVillageCoords = 'xxx|yyy xxx|yyy';
-		window.playerFarmSettings=[];
-		window.playerFarmSettings.allowedTroops=[
-					[
-						{ name: 'light', min: 5, max: 75 }
-					],
-					[
-						{ name: 'spear', min: 25, max: 75 },
-						{ name: 'sword', min: 25, max: 25 }
-					]
-				];
-		$.getScript('https://dextersk.github.io/TribalWarsScripts/playerFarm.js');
-		</textarea><br><br>
-		
 		
 		pasteAllMembers <div style="display: inline-block;" id="appendplayerFarm"></div><br>
 		<textarea readonly onclick="onClick('pasteAllMembers');" id="pasteAllMembers" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/pasteAllMembers.js');</textarea><br><br>
 		
-		
 		playerFarmsFinder <div style="display: inline-block;" id="appendplayerFarmsFinder"></div><br>
 		<textarea readonly onclick="onClick('playerFarmsFinder');" id="playerFarmsFinder" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/playerFarmsFinder.js');</textarea><br><br>
 		
-		
-		ReportImporter <div style="display: inline-block;" id="appendReportImporter"></div><br>
-		<textarea readonly onclick="onClick('ReportImporter');" id="ReportImporter" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ReportImporter.js');</textarea><br><br>
-		
-		
 		ShowAllyArmy <div style="display: inline-block;" id="appendShowAllyArmy"></div><br>
 		<textarea readonly onclick="onClick('ShowAllyArmy');" id="ShowAllyArmy" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ShowAllyArmy.js');</textarea><br><br>
-		
-		
-		ShowMS <div style="display: inline-block;" id="appendShowMS"></div><br>
-		<textarea readonly onclick="onClick('ShowMS');" id="ShowMS" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ShowMS.js');</textarea><br><br>
-		
-		
-		ShowMSnew <div style="display: inline-block;" id="appendShowMSnew"></div><br>
-		<textarea readonly onclick="onClick('ShowMSnew');" id="ShowMSnew" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/ShowMSnew.js');</textarea><br><br>
-		
-		
-		SnobSnipe <div style="display: inline-block;" id="appendSnobSnipe"></div><br>
-		<textarea readonly onclick="onClick('SnobSnipe');" id="SnobSnipe" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/SnobSnipe.js');</textarea><br><br>
-		
-		
+				
 		watchTower <div style="display: inline-block;" id="appendwatchTower"></div><br>
 		<textarea readonly onclick="onClick('watchTower');" id="watchTower" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/watchTower.js');</textarea><br><br>
+		-->
 		
-		
-		WHBalancer <div style="display: inline-block;" id="appendWHBalancer"></div><br>
-		<textarea readonly onclick="onClick('WHBalancer');" onclick="onClick('WHBalancer');" id="WHBalancer" style="width: 800px; height: 24px;">javascript:$.getScript('https://dextersk.github.io/TribalWarsScripts/WHBalancer.js');</textarea><br><br>
-
 
 		<script>
 		function onClick( id )
@@ -168,6 +313,26 @@
 				var div = document.getElementById( append );
 				div.innerHTML = 'Script bol úspešne skopírovaný do clipboardu';
 				div.style.background = "lime";
+			}
+		}
+		function show( id )
+		{
+			//document.getElementsByClassName( id ).onclick = function()
+			{
+				
+				let thing = document.getElementsByClassName( id )[0];
+				//alert(thing);
+				if(window.getComputedStyle(thing , "").display == 'none')
+				{
+					thing.style.display = "block";
+					console.log("Element is hidden.");
+
+				}
+				else
+				{
+					thing.style.display = "none";
+					console.log("Element is visible.");
+				}
 			}
 		}
 		</script>
