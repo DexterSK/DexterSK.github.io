@@ -78,6 +78,9 @@ if( show_ODD == true )
 
 for( i = 1;i < rows.length - 1 + plus_one;i++ )
 {
+	alert(rows.length);
+	alert(rows.toString());
+	
 	var s1 = rows.getElementsByTagName("a")[0].toString();
 	alert( s1 );
 	
