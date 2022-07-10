@@ -13,7 +13,7 @@
 		{
 			var overview_patt = /The troops overview shows the counts of troops owned by each village, including troops currently not in the village./i;
 			//var location = overview_patt.exec(data).index;
-			alert(overview_patt.exec(data));
+			//alert(overview_patt.exec(data));
 			var shorterText = data.substr(location, data.indexOf('</table>', location)-location);
 			var troopPatt = /<tr>.*?<\/tr>/gis;
 			var troops = [...shorterText.matchAll(troopPatt)];
