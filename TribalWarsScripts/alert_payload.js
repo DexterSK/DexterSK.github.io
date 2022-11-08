@@ -9,7 +9,11 @@ window.pb.IRON_MIN=400,
 
 $.getScript('https://dextersk.github.io/TribalWarsScripts/alert_payload.js');
 
- */
+*/
+
+function contains(str, substr) {
+	return str.indexOf(substr) >= 0;
+}
 
 function redirectToExchangePoint() {
 	let href = window.location.href;
