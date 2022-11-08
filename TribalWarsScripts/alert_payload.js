@@ -10,6 +10,15 @@ window.pb.SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82
 $.getScript('https://dextersk.github.io/TribalWarsScripts/alert_payload.js');
 
 */
+
+// Override these settings by defining `window.pb`
+var settings = $.extend({
+    WOOD_MIN: 200,
+    STONE_MIN: 200,
+    IRON_MIN: 200,
+    SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
+    cookieName: 'pfdex-history'
+}, window.pb || {});
   
 function contains(str, substr) {
 	return str.indexOf(substr) >= 0;
@@ -32,18 +41,7 @@ function redirectToExchangePoint() {
 var check = function()
 {
 
-  
-  // Override these settings by defining `window.pb`
-  var settings = $.extend({
-      WOOD_MIN: 200,
-      STONE_MIN: 200,
-      IRON_MIN: 200,
-      SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
-      cookieName: 'pfdex-history'
-  }, window.pb || {});
-  
-  console.log('Using settings: ', settings);
-  	
+  //console.log('Using settings: ', settings);
   //alert("NoFe@r's payload loaded!");
   redirectToExchangePoint();
   
@@ -54,52 +52,22 @@ var check = function()
 
   if( settings.WOOD_MIN >= wood )
   {
-	  alertSnd.play();
-  	//alertSnd.play();
-	//confirm('Počet DREVA 1 PB klesol na ' + wood) ? after() : after();
-  	//setTimeout(function() { alert('Počet DREVA 1 PB klesol na ' + wood); }, 10);
-  	//document.getElementById("market_status_bar").setAttribute("id", "div_top2");
-  	//document.getElementById('market_status_bar').style.color = 'red';
-  	//document.getElementById('market_status_bar').style.fontSize = 'xx-large';
-	
-	/*
-   var tag = document.createElement("p");
-   var text = document.createTextNode('Počet DREVA ZA 1 PB klesol na ' + wood);
-   tag.appendChild(text);
-   var element = document.getElementById("market_status_bar");
-   element.appendChild(tag);
-
-	
-  	document.getElementById("market_status_bar").innerHTML='Počet DREVA ZA 1 PB klesol na ' + wood;
-    */
+    alertSnd.play();
+    console.log('Počet DREVA za 1 PB klesol na ' + wood);
   }
   
   if( settings.STONE_MIN >= stone )
   {
-	  alertSnd.play();
-	 // confirm('Počet HLINY za 1 PB klesol na ' + stone) ? after() : after();
-	  /*
-  	alertSnd.play();
-  	//setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + stone); }, 10);
-  	document.getElementById('market_status_bar').style.color = 'red';
-  	document.getElementById('market_status_bar').style.fontSize = 'xx-large';
-  	document.getElementById("market_status_bar").innerHTML='Počet HLINY ZA 1 PB klesol na ' + stone;
-    */
+    alertSnd.play();
+    console.log('Počet HLINY za 1 PB klesol na ' + stone);
   }
   
   if( settings.IRON_MIN >= iron )
   {
-	  alertSnd.play();
-	  //confirm('Počet ŽELEZA za 1 PB klesol na ' + iron) ? after() : after();
-	  /*
-  	alertSnd.play();
-  	//setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + iron); }, 10);
-  	document.getElementById('market_status_bar').style.color = 'red';
-  	document.getElementById('market_status_bar').style.fontSize = 'xx-large';
-  	document.getElementById("market_status_bar").innerHTML='Počet ŽELEZA ZA 1 PB klesol na ' + iron;
-    */
+    alertSnd.play();
+    console.log('Počet ŽELEZA za 1 PB klesol na ' + iron);
   }
-  console.log("run");
+
   setTimeout(check, 2000); // check again in a second
 };
 
