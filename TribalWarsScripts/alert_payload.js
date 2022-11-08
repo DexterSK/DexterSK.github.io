@@ -55,8 +55,9 @@
 	
   if( settings.WOOD_MIN >= wood )
   {
+	  alertSnd.play();
   	//alertSnd.play();
-	confirm('Počet DREVA 1 PB klesol na ' + wood) ? after() : after();
+	//confirm('Počet DREVA 1 PB klesol na ' + wood) ? after() : after();
   	//setTimeout(function() { alert('Počet DREVA 1 PB klesol na ' + wood); }, 10);
   	//document.getElementById("market_status_bar").setAttribute("id", "div_top2");
   	//document.getElementById('market_status_bar').style.color = 'red';
@@ -76,7 +77,8 @@
   
   if( settings.STONE_MIN >= stone )
   {
-	  confirm('Počet HLINY za 1 PB klesol na ' + stone) ? after() : after();
+	  alertSnd.play();
+	 // confirm('Počet HLINY za 1 PB klesol na ' + stone) ? after() : after();
 	  /*
   	alertSnd.play();
   	//setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + stone); }, 10);
@@ -88,7 +90,8 @@
   
   if( settings.IRON_MIN >= iron )
   {
-	  confirm('Počet ŽELEZA za 1 PB klesol na ' + iron) ? after() : after();
+	  alertSnd.play();
+	  //confirm('Počet ŽELEZA za 1 PB klesol na ' + iron) ? after() : after();
 	  /*
   	alertSnd.play();
   	//setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + iron); }, 10);
