@@ -34,7 +34,7 @@ var settings = $.extend({
     WOOD_MIN: 200,
     STONE_MIN: 200,
     IRON_MIN: 200,
-	SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
+    SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
     cookieName: 'pfdex-history'
 }, window.pb || {});
 
@@ -52,17 +52,17 @@ var alertSnd = new Audio( settings.SOUND );
 if( settings.WOOD_MIN >= wood )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet XX DREVA 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet DREVA 1 PB klesol na ' + wood); }, 10);
 }
 
 if( settings.STONE_MIN >= stone )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + stone); }, 10);
 }
 
 if( settings.IRON_MIN >= iron )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + iron); }, 10);
 }
