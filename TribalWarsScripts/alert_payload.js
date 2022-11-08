@@ -54,7 +54,9 @@ if( settings.WOOD_MIN >= wood )
 	alertSnd.play();
 	//setTimeout(function() { alert('Počet DREVA 1 PB klesol na ' + wood); }, 10);
 	//document.getElementById("market_status_bar").setAttribute("id", "div_top2");
-	$( "#market_status_bar" ).dialog();
+	$( function() {
+		$( "#market_status_bar" ).dialog();
+	} );
 	document.getElementById("market_status_bar").innerHTML='Počet DREVA 1 PB klesol na ' + wood;
 }
 
@@ -62,7 +64,9 @@ if( settings.STONE_MIN >= stone )
 {
 	alertSnd.play();
 	//setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + stone); }, 10);
-	$( "#market_status_bar" ).dialog();
+	$( function() {
+		$( "#market_status_bar" ).dialog();
+	} );
 	document.getElementById("market_status_bar").innerHTML='Počet HLINY 1 PB klesol na ' + stone;
 
 }
@@ -71,7 +75,9 @@ if( settings.IRON_MIN >= iron )
 {
 	alertSnd.play();
 	//setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + iron); }, 10);
-	$( "#market_status_bar" ).dialog();
+	$( function() {
+		$( "#market_status_bar" ).dialog();
+	} );
 	document.getElementById("market_status_bar").innerHTML='Počet ŽELEZA 1 PB klesol na ' + iron;
 
 }
