@@ -34,7 +34,7 @@ var settings = $.extend({
     WOOD_MIN: 200,
     STONE_MIN: 200,
     IRON_MIN: 200,
-
+	SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
     cookieName: 'pfdex-history'
 }, window.pb || {});
 
@@ -46,10 +46,23 @@ redirectToExchangePoint();
 var wood = $('#premium_exchange_rate_wood').text().replace("                     ","").split("\n")[1];
 var stone = $('#premium_exchange_rate_stone').text().replace("                     ","").split("\n")[1];
 var iron = $('#premium_exchange_rate_iron').text().replace("                     ","").split("\n")[1];
-var alertSnd = new Audio('https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3');
+var alertSnd = new Audio( settings.SOUND );
 
-if( settings.WOOD_MIN >= wood || settings.STONE_MIN >= stone || settings.IRON_MIN >= iron)
+
+if( settings.WOOD_MIN >= wood )
 {
 	alertSnd.play();
-	alert("RYCHLOOOOOOOOOO!");
+	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
+}
+
+if( settings.STONE_MIN >= stone )
+{
+	alertSnd.play();
+	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
+}
+
+if( settings.IRON_MIN >= iron )
+{
+	alertSnd.play();
+	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
 }
