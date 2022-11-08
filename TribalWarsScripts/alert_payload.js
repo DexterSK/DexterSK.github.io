@@ -52,17 +52,17 @@ var alertSnd = new Audio( settings.SOUND );
 if( settings.WOOD_MIN >= wood )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet XX DREVA 1 PB klesol na ' + wood); }, 1);
 }
 
 if( settings.STONE_MIN >= stone )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + wood); }, 1);
 }
 
 if( settings.IRON_MIN >= iron )
 {
 	alertSnd.play();
-	setTimeout(function() { alert('Počet XX za 1 PB klesol na ' + wood); }, 1);
+	setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + wood); }, 1);
 }
