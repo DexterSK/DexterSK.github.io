@@ -68,6 +68,7 @@ var check = function()
     console.log('Počet ŽELEZA za 1 PB klesol na ' + iron);
   }
 
+  console.log('running');
   setTimeout(check, 2000); // check again in a second
 };
 
