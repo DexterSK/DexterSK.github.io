@@ -100,7 +100,7 @@ var check = function()
     */
   }
   console.log("run");
+  setTimeout(check, 2000); // check again in a second
 };
 
-while( true )
-	check();
+check();
