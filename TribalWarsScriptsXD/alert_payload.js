@@ -1,1 +1,0 @@
-alert("NoFe@r's payload loaded!");
