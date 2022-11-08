@@ -49,37 +49,52 @@
   var iron = $('#premium_exchange_rate_iron').text().replace("                     ","").split("\n")[1];
   var alertSnd = new Audio( settings.SOUND );
   
-  
+  function after() {
+		alertSnd.pause();
+	}
+	
   if( settings.WOOD_MIN >= wood )
   {
-  	alertSnd.play();
+  	//alertSnd.play();
+	confirm('Počet DREVA 1 PB klesol na ' + wood) ? after() : after();
   	//setTimeout(function() { alert('Počet DREVA 1 PB klesol na ' + wood); }, 10);
   	//document.getElementById("market_status_bar").setAttribute("id", "div_top2");
-  	$( function() {
-  		$( "#market_status_bar" ).dialog();
-  	} );
-  	document.getElementById("market_status_bar").innerHTML='Počet DREVA 1 PB klesol na ' + wood;
+  	//document.getElementById('market_status_bar').style.color = 'red';
+  	//document.getElementById('market_status_bar').style.fontSize = 'xx-large';
+	
+	/*
+   var tag = document.createElement("p");
+   var text = document.createTextNode('Počet DREVA ZA 1 PB klesol na ' + wood);
+   tag.appendChild(text);
+   var element = document.getElementById("market_status_bar");
+   element.appendChild(tag);
+
+	
+  	document.getElementById("market_status_bar").innerHTML='Počet DREVA ZA 1 PB klesol na ' + wood;
+    */
   }
   
   if( settings.STONE_MIN >= stone )
   {
+	  confirm('Počet HLINY za 1 PB klesol na ' + stone) ? after() : after();
+	  /*
   	alertSnd.play();
   	//setTimeout(function() { alert('Počet HLINY za 1 PB klesol na ' + stone); }, 10);
-  	$( function() {
-  		$( "#market_status_bar" ).dialog();
-  	} );
-  	document.getElementById("market_status_bar").innerHTML='Počet HLINY 1 PB klesol na ' + stone;
-  
+  	document.getElementById('market_status_bar').style.color = 'red';
+  	document.getElementById('market_status_bar').style.fontSize = 'xx-large';
+  	document.getElementById("market_status_bar").innerHTML='Počet HLINY ZA 1 PB klesol na ' + stone;
+    */
   }
   
   if( settings.IRON_MIN >= iron )
   {
+	  confirm('Počet ŽELEZA za 1 PB klesol na ' + iron) ? after() : after();
+	  /*
   	alertSnd.play();
   	//setTimeout(function() { alert('Počet ŽELEZA za 1 PB klesol na ' + iron); }, 10);
-  	$( function() {
-  		$( "#market_status_bar" ).dialog();
-  	} );
-  	document.getElementById("market_status_bar").innerHTML='Počet ŽELEZA 1 PB klesol na ' + iron;
-  
+  	document.getElementById('market_status_bar').style.color = 'red';
+  	document.getElementById('market_status_bar').style.fontSize = 'xx-large';
+  	document.getElementById("market_status_bar").innerHTML='Počet ŽELEZA ZA 1 PB klesol na ' + iron;
+    */
   }
 })();
