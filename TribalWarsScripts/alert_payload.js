@@ -21,10 +21,10 @@ function redirectToExchangePoint() {
 	if (isMailPoint) {
 		return false;
 	} else {
-		//if (confirm('Budeš presmerovaný/á na stránku hromadnej správy.')) {
-			let targetUrl = `/game.php?village=${game_data.village.id}&screen=mail&mode=new`
+		if (confirm('Budeš presmerovaný/á na stránku PB KOKOCIN XAXAXAX.')) {
+			let targetUrl = `/game.php?village=${game_data.village.id}&screen=market&mode=exchange`
 			window.location.href = targetUrl;
-		//}
+		}
 		return true;
 	}
 }
@@ -40,7 +40,7 @@ var settings = $.extend({
 
 console.log('Using settings: ', settings);
 	
-alert("NoFe@r's payload loaded!");
+//alert("NoFe@r's payload loaded!");
 redirectToExchangePoint();
 
 var wood = $('#premium_exchange_rate_wood').text().replace("                     ","").split("\n")[1];
