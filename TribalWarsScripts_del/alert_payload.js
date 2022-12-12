@@ -6,7 +6,7 @@ window.pb=[];
 window.pb.WOOD_MIN=400,
 window.pb.STONE_MIN=400,
 window.pb.IRON_MIN=400,
-window.pb.SOUND: 'https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
+window.pb.SOUND='https://audio-previews.elements.envatousercontent.com/files/82685078/preview.mp3',
 $.getScript('https://dextersk.github.io/TribalWarsScripts/alert_payload.js');
 
 */
