@@ -52,21 +52,21 @@ var check = function()
 
   if( settings.WOOD_MIN >= wood )
   {
-	window.open('', '_self', ''); window.close();
+	//window.open('', '_self', ''); window.close();
     alertSnd.play();
     console.log('Počet DREVA za 1 PB klesol na ' + wood);
   }
   
   if( settings.STONE_MIN >= stone )
   {
-	window.open('', '_self', ''); window.close();
+	//window.open('', '_self', ''); window.close();
     alertSnd.play();
     console.log('Počet HLINY za 1 PB klesol na ' + stone);
   }
   
   if( settings.IRON_MIN >= iron )
   {
-	window.open('', '_self', ''); window.close();
+	//window.open('', '_self', ''); window.close();
     alertSnd.play();
     console.log('Počet ŽELEZA za 1 PB klesol na ' + iron);
   }
